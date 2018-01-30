@@ -22,7 +22,7 @@ export class Publication extends React.Component<PublicationProps> {
         }
         else return [];
     }
-
+     
     public render() {
         return <div className={this.props.isLoading ? "row hidden" : "row"}>
             <div className="col-md-12">

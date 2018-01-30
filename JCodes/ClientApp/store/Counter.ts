@@ -26,7 +26,7 @@ type KnownAction = IncrementCountAction | DecrementCountAction;
 export const actionCreators = {
     increment: () => <IncrementCountAction>{ type: 'INCREMENT_COUNT' },
     decrement: () => <DecrementCountAction>{ type: 'DECREMENT_COUNT' }
-};
+}; 
 
 // ----------------
 // REDUCER - For a given state and action, returns the new state. To support time travel, this must not mutate the old state.

@@ -20,7 +20,7 @@ export class NavMenu extends React.Component<{}, {}> {
                         <li>
                             <NavLink exact to={ '/' } activeClassName='active'>
                                 <span className='glyphicon glyphicon-home'></span> Home
-                            </NavLink>
+                            </NavLink> 
                         </li>
                         <li>
                             <NavLink to={ '/counter' } activeClassName='active'>

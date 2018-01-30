@@ -30,7 +30,7 @@ interface RequestWeatherForecastsAction {
 interface ReceiveWeatherForecastsAction {
     type: 'RECEIVE_WEATHER_FORECASTS';
     startDateIndex: number;
-    forecasts: WeatherForecast[];
+    forecasts: WeatherForecast[]; 
 }
 
 // Declare a 'discriminated union' type. This guarantees that all references to 'type' properties contain one of the

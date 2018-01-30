@@ -20,7 +20,7 @@ export class Footer extends React.Component<any, any> {
                                         STAY CONNECTED
                                     </span>
 
-                                </div>
+                                </div> 
 
                             </div>
 

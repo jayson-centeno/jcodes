@@ -37,7 +37,7 @@ export const actionCreators = {
 
                 const data = response.data as Publication[];
                 console.log(data[0].title);
-                dispatch({ type: 'ReceivePublications', publications: data });
+                dispatch({ type: 'ReceivePublications', publications: data }); 
 
             })
             .catch(() => {

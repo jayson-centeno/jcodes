@@ -17,7 +17,7 @@ class Counter extends React.Component<CounterProps, {}> {
         const x = this.props;
 
     }
-
+     
     public render() {
         return <div>
             <h1>Counter</h1>

@@ -9,4 +9,4 @@ export const routes = <Index>
     <Route exact path='/' component={ Home } />
     <Route path='/counter' component={ Counter } />
     <Route path='/fetchdata/:startDateIndex?' component={ FetchData } />
-</Index>;
+</Index>; 

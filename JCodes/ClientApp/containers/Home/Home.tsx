@@ -78,4 +78,4 @@ class Home extends React.Component<PublicationProps, {}> {
 export default connect(
     (state: ApplicationState) => state.publications,
     PublicationStore.actionCreators
-)(Home) as  typeof Home
+)(Home) as  typeof Home 

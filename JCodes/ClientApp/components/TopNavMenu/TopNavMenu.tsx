@@ -29,8 +29,8 @@ export class TopNavMenu extends React.Component<{}, {}> {
                     </li>
                     <li>
                         <a href="#">STACKOVERFLOW</a> ||
-                    </li>
-                    <li>
+                    </li> 
+                    <li> 
                         <a href="#">LINKEDIN</a> ||
                     </li>
                     <li>

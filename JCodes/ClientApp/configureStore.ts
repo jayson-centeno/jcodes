@@ -29,7 +29,7 @@ export default function configureStore(history: History, initialState?: Applicat
     }
 
     return store;
-}
+} 
 
 function buildRootReducer(allReducers: ReducersMapObject) {
     return combineReducers<ApplicationState>(Object.assign({}, allReducers, { routing: routerReducer }));

@@ -20,4 +20,4 @@ export class Index extends React.Component<{}, {}> {
             <Footer />
         </div>;
     }
-}
+} 
