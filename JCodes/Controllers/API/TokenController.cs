@@ -7,25 +7,32 @@ using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using JCodes.Domain.Model.Authentication;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 
 namespace JCodes
 {
     [Route("api/[controller]")]
     public class TokenController : Controller
     {
-        public TokenController(IConfiguration configuration)
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        public IConfiguration Configuration { get; }
+
+
+        public TokenController(IConfiguration configuration, SignInManager<ApplicationUser> signInManager)
         {
             Configuration = configuration;
+            _signInManager = signInManager;
         }
 
-        public IConfiguration Configuration { get; }    
 
-        [HttpPost("")]
+        [EnableCors("*")]
         [AllowAnonymous]
-        //[AllowCrossSiteJson]
-        public IActionResult Post([FromForm] UserAuthenticate model)
+        public async Task<IActionResult> Post([FromBody]UserAuthenticate model)
         {
-            var token = GetJwtSecurityToken(model);
+            var token = await GetJwtSecurityToken(model);
             return Ok(new
             {
                 token = new JwtSecurityTokenHandler().WriteToken(token),
@@ -33,11 +40,9 @@ namespace JCodes
             });
         }
 
-        private JwtSecurityToken GetJwtSecurityToken(UserAuthenticate user)
+        private async Task<JwtSecurityToken> GetJwtSecurityToken(UserAuthenticate user)
         {
-            //var userClaims = await _userManager.GetClaimsAsync(user);
-
-            var identity = GetIdentity(user);
+            var identity = await GetIdentity(user);
             if (identity == null)
                 throw new UnauthorizedAccessException();
 
@@ -50,15 +55,13 @@ namespace JCodes
             );
         }
 
-        private ClaimsIdentity GetIdentity(UserAuthenticate model)
+        private async Task<ClaimsIdentity> GetIdentity(UserAuthenticate model)
         {
-            // DON'T do this in production, obviously!
-            if (model.Email == "jj@j.com" && model.Password == "test")
-            {
-                return new ClaimsIdentity(new System.Security.Principal.GenericIdentity(model.Email, "Token"), new Claim[] { });
-            }
+            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
 
-            // Credentials are invalid, or account doesn't exist
+            if (result.Succeeded)
+                return new ClaimsIdentity(new System.Security.Principal.GenericIdentity(model.Email, "Token"), new Claim[]{ });
+
             return null;
         }
 

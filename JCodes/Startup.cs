@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc.Cors;
 
 namespace JCodes
 {
@@ -33,6 +35,7 @@ namespace JCodes
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
                 app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
                 {
                     HotModuleReplacement = true,
@@ -45,11 +48,11 @@ namespace JCodes
             }
 
             app.UseStaticFiles();
-
             app.UseAuthentication();
 
-            app.UseMvc(routes =>
-            {
+            //app.UseCors("*");
+
+            app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

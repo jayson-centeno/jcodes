@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { ApplicationState }  from '../store';
-import * as CounterStore from '../store/Counter';
-import * as WeatherForecasts from '../store/WeatherForecasts';
+import { ApplicationState }  from '../../store';
+import * as CounterStore from '../../store/Counter';
+import * as WeatherForecasts from '../../store/WeatherForecasts';
 
 type CounterProps =
     CounterStore.CounterState
@@ -11,6 +11,13 @@ type CounterProps =
     & RouteComponentProps<{}>;
 
 class Counter extends React.Component<CounterProps, {}> {
+
+    componentWillMount() {
+
+        const x = this.props;
+
+    }
+
     public render() {
         return <div>
             <h1>Counter</h1>

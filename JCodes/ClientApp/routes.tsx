@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
-import { Layout } from './components/Layout/Layout';
-import Home from './components/Home';
-import FetchData from './components/FetchData';
-import Counter from './components/Counter';
+import { Index } from './containers/Index';    
+import Home from './containers/Home/Home';
+import FetchData from './containers/FetchData/FetchData';
+import Counter from './containers/Counter/Counter';
 
-export const routes = <Layout>
+export const routes = <Index>
     <Route exact path='/' component={ Home } />
     <Route path='/counter' component={ Counter } />
     <Route path='/fetchdata/:startDateIndex?' component={ FetchData } />
-</Layout>;
+</Index>;

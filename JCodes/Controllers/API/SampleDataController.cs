@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace JCodes.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/sampledata")]
     public class SampleDataController : Controller
     {
         private static string[] Summaries = new[]
@@ -16,7 +16,7 @@ namespace JCodes.Controllers
         };
 
         [HttpGet("[action]")]
-        [Authorize]
+        //[Authorize]
         public IEnumerable<WeatherForecast> WeatherForecasts(int startDateIndex)
         {
             var rng = new Random();
@@ -29,7 +29,7 @@ namespace JCodes.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         public string Test()
         {
             return "test";
