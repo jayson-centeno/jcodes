@@ -29,7 +29,7 @@ export class AuthenticationService implements IAuthenticationService {
         let localStorage = this.getLocalStorage();
         if (localStorage)
             localStorage.setItem('jcodes_jwtToken', token);
-        else {
+        else { 
             let tokenElement = document.getElementById('Token') as HTMLInputElement;
             if (tokenElement != null)
                 tokenElement.value = token;
