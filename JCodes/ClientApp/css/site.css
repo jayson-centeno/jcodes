@@ -1,9 +1,9 @@
 * { font-family: 'Roboto', sans-serif; letter-spacing: 2px; font-size: 15px; }
 
 body { background-color: #1e1e1e; color: #fff; }
-.footer { background-color: #1e1e1e; min-height: 250px; width:100% }
+.footer { background-color: #1e1e1e;  width:100% }
 .footer .logo-text { color:#fff; }
-.footer .title { color: #8b8985; }
+.footer .title, .pub-parent li p, .mid-text { color: #c0bfbd }
 
 .rights { min-height: 50px; width: 100%; background-color: #575656; padding: 15px; }
 .rights .highlight { color: #f9c038; }
@@ -13,10 +13,6 @@ ul li { list-style: none; }
 
 .main-nav li .glyphicon { margin-right: 10px; }
 #login { color: #fff; font-size: 10pt; }
-
-.link { color: #f9c038; }
-.link-list { font-size: 11pt; }
-.link-strong { font-size: 20pt;  }
 
 .logo-text { color: #f9c038; }
 .custom-nav { background: none; border: none; min-height: 0; margin-top: 100px; margin-bottom: 50px; }
@@ -31,7 +27,7 @@ ul li { list-style: none; }
 /* Highlighting rules for nav menu items */
 .custom-nav .nav.navbar-nav li a.active,
 .custom-nav .nav.navbar-nav li a.active:hover,
-.custom-nav .nav.navbar-nav li a.active:focus { color: red; }
+.custom-nav .nav.navbar-nav li a.active:focus { color: #fff; }
 .custom-nav.navbar-default .navbar-nav > li > a { color: #f9c038; background: none; padding: 0; padding: 0 10px; display: inline; font-size: 10pt; }
 .custom-nav.navbar-default .navbar-nav > li { color: #f9c038; }
 .custom-nav.navbar-default .navbar-nav > li > a:hover { color: white; }
@@ -39,11 +35,11 @@ ul li { list-style: none; }
 .custom-nav.navbar-default .navbar-nav li.active a:hover { background: none; color: white; }
 .custom-nav .collapse.navbar-collapse { padding-left: 0; }
 
-.publication { background-color: #575656; min-height: 450px; margin-top: 80px; position: relative; /*temporary until the footer is made*/ }
-.pub-wrapper { margin-top: 20px; position: relative; }
+.publication { background-color: #575656; min-height: 450px; position: relative; /*temporary until the footer is made*/ }
+.pub-wrapper { position: relative; }
 .pub-parent { margin-top:20px; margin-bottom:50px; }
 .pub-parent li { margin-bottom: 25px; }
-.pub-parent li p { color: #c0bfbd; }
+
 
 .hex, .hex-invert { width: 500px; height: 30px; transform: translateX(-50%); }
 .hex:before, .hex:after, .hex-invert:before, .hex-invert:after { content: ""; position: absolute; height: 20px; height: 20px; border: none; border-width: 0px 0px 1px 0px; transform-origin: bottom center; background-color: #1e1e1e; background-color: #1e1e1e; }
@@ -57,17 +53,43 @@ ul li { list-style: none; }
 .hex-invert:before { transform: skew(-55deg); border-left-width: 1px; }
 .hex-invert:after { transform: skew(55deg); border-right-width: 1px; left: 85px; }
 
-.blinker { animation-name: blinker; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(1,0,0,1); animation-duration: 1s; display: inline-block; width: 15px; height: 1px; margin-left: 0; border-radius: 3px; box-shadow: 0 0 10px #fff; background-color: #fff; margin-right: 1px; }
+.logo-link { text-decoration:none; }
+.logo-link:hover, .logo-link:active, .logo-link:focus { text-decoration: none; }
+
+#explore li { padding: 7px 0; }
+
+#connected li { padding-right: 20px; }
+#connected li a.link { float: left; padding-right: 20px; opacity:0.7 }
+#connected li a.link i.fa { font-size: 20pt; }
+
+.link { color: #f9c038; cursor:pointer; }
+.link:hover, .link:active, .link:focus { color: #fff; opacity: 1 !important; text-decoration:none; }
+.link-list { font-size: 11pt; }
+.link-strong { font-size: 20pt; }
 
 /* CSS UTILS */
+.blinker { animation-name: blinker; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(1,0,0,1); animation-duration: 1s; display: inline-block; width: 15px; height: 1px; margin-left: 0; border-radius: 3px; box-shadow: 0 0 10px #fff; background-color: #fff; margin-right: 1px; }
 
 .no-padding-left { padding-left: 0 }
+.margin-bottom-10 { margin-bottom: 10px }
+.margin-bottom-20 { margin-bottom: 20px }
 .margin-bottom-30 { margin-bottom: 30px }
+.margin-bottom-40 { margin-bottom: 40px }
+.margin-bottom-50 { margin-bottom: 50px }
 .margin-bottom-60 { margin-bottom: 60px }
 .margin-bottom-120 { margin-bottom: 120px }
 .relative { position: relative; }
 
+.margin-top-80 { margin-top: 80px; }
+.margin-top-70 { margin-top: 70px }
+.margin-top-50 { margin-top: 50px }
+.margin-top-40 { margin-top: 40px }
 .margin-top-30 { margin-top: 30px }
+.margin-top-20 { margin-top: 20px }
+.margin-top-10 { margin-top: 10px }
+
+.publication.home { margin-top:80px; }
+.publication.home .pub-wrapper { margin-top: 70px; }
 
 @media (max-width: 767px) {
     .no-padding-left { padding-left: 15px; }

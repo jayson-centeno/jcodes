@@ -1,4 +1,5 @@
 ﻿import * as React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export class TopNavMenu extends React.Component<{}, {}> {
     public render() {
@@ -15,11 +16,13 @@ export class TopNavMenu extends React.Component<{}, {}> {
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                  <ul className="nav navbar-nav">
-                    <li className="active">
-                        <span className="bracket">{'{'}</span><a href="#">HOME</a>  ||
+                    <li>
+                        {'{'}<NavLink exact={true} className="bracket" activeClassName='active' to="/">
+                            <span className='fa fa-home'></span> Home
+                        </NavLink> ||
                     </li>
                     <li>
-                        <a href="#">ABOUT</a> ||
+                        <NavLink className="bracket" activeClassName='active' to="/about">About</NavLink> ||
                     </li>
                     <li>
                         <a href="#">BLOGS</a> ||

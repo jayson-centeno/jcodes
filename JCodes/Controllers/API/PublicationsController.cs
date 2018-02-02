@@ -15,7 +15,15 @@ namespace JCodes.Controllers
         [Authorize]
         public IEnumerable<PublicationModel> GetPublications()
         {
-            return Enumerable.Repeat(new PublicationModel { Id =1, Title ="test", Description= "test" }, 1);
+            return new List<PublicationModel>() {
+
+                new PublicationModel { Id = 1, Title = "C# Useful Extension Methods", Description = "test" },
+                new PublicationModel { Id = 2, Title = "Simple Coding Technique", Description = "test" },
+                new PublicationModel { Id = 3, Title = "Knockout JS Component Builder", Description = "test" },
+                new PublicationModel { Id = 4, Title = "Reactjs Basics", Description = "test" },
+                new PublicationModel { Id = 5, Title = "ReactJS Forms and Validations", Description = "test" }
+
+            };
         }
 
         [HttpPost]
