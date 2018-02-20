@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { RouteComponentProps, Link } from 'react-router-dom';
 import { Button } from "reactstrap";
 
@@ -10,13 +11,14 @@ import { TwoColumnContentBody } from '../../components/ContentBody/TwoColumnCont
 
 type PublicationProps = PublicationStore.PublicationsState & typeof PublicationStore.actionCreators & RouteComponentProps<{}>;
 
-class Home extends React.Component<PublicationProps, {}> {
+class Home extends React.Component<PublicationProps, any> {
 
     componentDidMount() {
         this.props.fetchPublications();
     }
 
     public render() {
+
         return <div>
             <div className="container">
                 <div className="row margin-bottom-120">
@@ -27,16 +29,18 @@ class Home extends React.Component<PublicationProps, {}> {
                     </div>
                 </div>
                 <div className="row">
+
                     <div className="col-sm-7">
                         <h2 className="sub-title">About</h2>
                         <hr className="divider1" />
                         <hr className="divider2" />
                         <p className="mid-text">
-                            As both designer and developer of projects that require <br /> a laser focus on both,                            I unite form and function to <br />meet both user needs and business goals.                        </p>
+                            As both designer and developer of projects that require <br /> a laser focus on both,                                    I unite form and function to <br />meet both user needs and business goals.                                </p>
                         <p className="mid-text">
                             Currently improving customer experiences as Senior UX <br /> Designer at BrightEdge.
-                        </p>
+                                </p>
                     </div>
+
                     <div className="col-sm-5">
                         <h2 className="sub-title">Specializing In</h2>
                         <hr className="divider1" />
@@ -68,4 +72,4 @@ class Home extends React.Component<PublicationProps, {}> {
 export default connect(
     (state: ApplicationState) => state.publications,
     PublicationStore.actionCreators
-)(Home) as  typeof Home 
+)(Home) as  typeof Home

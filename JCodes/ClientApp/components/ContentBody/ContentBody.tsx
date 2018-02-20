@@ -1,9 +1,11 @@
 ﻿import * as React from 'react'
 import { RouteComponentProps } from 'react-router-dom'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 export interface ContentBodyExtendedProps {
     Title: string,
-    CustomRootClass?:string
+    CustomRootClass?: string,
+    Active?:true
 }
 
 type ContentBodyProps = ContentBodyExtendedProps & RouteComponentProps<{}>;
@@ -12,13 +14,11 @@ export class ContentBody extends React.Component<ContentBodyProps, any> {
 
     public render() {
 
-        return <div>
-
-            <div className={`publication + ${this.props.CustomRootClass}`}>
+        return <div className={`publication ${this.props.CustomRootClass}`}>
                 <div className="hex">
                 </div>
                 <div className="container relative">
-                    <div className="pub-wrapper margin-bottom-50">
+                    <div className="pub-wrapper margin-bottom-100">
                         <div className="row">
                             {this.props.children}
                         </div>
@@ -26,8 +26,6 @@ export class ContentBody extends React.Component<ContentBodyProps, any> {
                 </div>
                 <div className="hex-invert">
                 </div>
-            </div>
-
         </div>
 
     }

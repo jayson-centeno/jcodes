@@ -65,7 +65,7 @@ export class Footer extends React.Component<any, any> {
                                             <Link className="link" to="/about">About</Link>
                                         </li>
                                         <li>
-                                            <Link className="link" to="/">Home</Link>
+                                            <Link className="link" to="/contact">Say hello</Link>
                                         </li>
                                     </ul>
 

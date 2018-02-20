@@ -1,18 +1,16 @@
+using JCodes.Domain.Model.Authentication;
+using JCodes.Model;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using System.IdentityModel.Tokens.Jwt;
-using Microsoft.Extensions.Configuration;
-using System.Security.Claims;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using JCodes.Domain.Model.Authentication;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
 using System.Diagnostics;
-using JCodes.Model;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace JCodes.Controllers
 {
@@ -31,7 +29,11 @@ namespace JCodes.Controllers
         {
             var result = GetJwtSecurityToken(new UserAuthenticate() { Email = "jaysword1@yahoo.com", Password = "D@rkj@y1" }).Result;
             string token = new JwtSecurityTokenHandler().WriteToken(result);
-            return View(new HomeModel() { Token = token });
+            return View(
+                new HomeModel() {
+                    Token = token,
+                    CaptchaKey =Configuration.GetValue<string>("CaptchaKey")
+                });
         }
 
         public IActionResult Error()

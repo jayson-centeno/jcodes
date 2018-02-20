@@ -11,6 +11,7 @@ export interface IAuthenticationService {
     setAuthToken(token: string): void;
     getAuthToken(): string | null;
     getAuthHeader(): any;
+    getCaptchaKey(): string | null;
 }
 
 @injectable()
@@ -68,6 +69,18 @@ export class AuthenticationService implements IAuthenticationService {
                 "Authorization": this.getAuthToken()
             }
         }
+    }
+
+    getCaptchaKey(): string | null {
+
+        if (typeof window === 'undefined') return '';
+
+        let captchaKeyElement = document.getElementById('CaptchaKey') as HTMLInputElement;
+        if (captchaKeyElement != null)
+            return captchaKeyElement.value;
+
+        return '';
+
     }
 
 }

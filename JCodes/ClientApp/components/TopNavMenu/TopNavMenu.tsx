@@ -18,14 +18,17 @@ export class TopNavMenu extends React.Component<{}, {}> {
                  <ul className="nav navbar-nav">
                     <li>
                         {'{'}<NavLink exact={true} className="bracket" activeClassName='active' to="/">
-                            <span className='fa fa-home'></span> Home
+                            <span className='fa fa-home'></span> HOME
                         </NavLink> ||
                     </li>
                     <li>
-                        <NavLink className="bracket" activeClassName='active' to="/about">About</NavLink> ||
+                        <NavLink className="bracket" activeClassName='active' to="/about">ABOUT</NavLink> ||
                     </li>
                     <li>
-                        <a href="#">BLOGS</a> ||
+                        <NavLink className="bracket" activeClassName='active' to="/contact">SAY HELLO</NavLink> ||
+                    </li>
+                    <li>
+                        <a href="#">RESUME</a> ||
                     </li>
                     <li>
                         <a href="#">WEB TOOLS</a> ||

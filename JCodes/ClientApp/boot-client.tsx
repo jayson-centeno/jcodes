@@ -1,6 +1,8 @@
 import "../node_modules/font-awesome/css/font-awesome.min.css"
-import './css/site.css';
+import '../node_modules/react-notifications/lib/notifications.css';
 import 'bootstrap';
+import './css/site.css';
+import './css/animate.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
@@ -26,8 +28,8 @@ function renderApp() {
     // and injects the app into a DOM element.
     ReactDOM.render(
         <AppContainer>
-            <Provider store={ store }>
-                <ConnectedRouter history={ history } children={ routes } /> 
+            <Provider store={store}>
+                <ConnectedRouter history={history} children={routes} />
             </Provider>
         </AppContainer>,
         document.getElementById('react-app')

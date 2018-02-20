@@ -23,16 +23,31 @@ module.exports = (env) => {
                 { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: "file-loader" }
             ]
         },
-        plugins: [new CheckerPlugin()]
+        plugins: [
+            new CheckerPlugin(),
+        ]
     });
 
     // Configuration for client-side bundle suitable for running in browsers
     const clientBundleOutputDir = './wwwroot/dist';
     const clientBundleConfig = merge(sharedConfig(), {
-        entry: { 'main-client': './ClientApp/boot-client.tsx' },
+        entry: { 'main-client': ['./ClientApp/boot-client.tsx'] },
         module: {
-            rules: [
-                { test: /\.css$/, use: ExtractTextPlugin.extract({ use: isDevBuild ? 'css-loader' : 'css-loader?minimize' }) }
+            rules: [    
+                {
+                    test: /\.css$/,
+                    use: isDevBuild ?
+                        ExtractTextPlugin.extract({
+                            fallback: 'style-loader',
+                            use: 'css-loader?minimize'
+                        }) : ['style-loader', 'css-loader'],
+                },
+                {
+                    test: /\.scss$/,
+                    use: ExtractTextPlugin.extract({
+                        use: ['style-loader', 'sass-loader']
+                    })
+                }
             ]
         },
         output: { path: path.join(__dirname, clientBundleOutputDir) },

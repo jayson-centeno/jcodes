@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,15 +23,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\common\Common.ts" />
     <None Remove="ClientApp\components\ContentBody\ContentBody.tsx" />
     <None Remove="ClientApp\components\ContentBody\OneColumnContentBody.tsx" />
     <None Remove="ClientApp\components\ContentBody\TwoColumnContentBody.tsx" />
     <None Remove="ClientApp\components\Footer\Footer.tsx" />
     <None Remove="ClientApp\components\publication.tsx" />
     <None Remove="ClientApp\containers\About\About.tsx" />
+    <None Remove="ClientApp\containers\Contact\Contact.tsx" />
     <None Remove="ClientApp\di\bootstrap.ts" />
     <None Remove="ClientApp\services\AuthenticationService.ts" />
+    <None Remove="ClientApp\services\ContactService.ts" />
     <None Remove="ClientApp\services\PublicationService.ts" />
+    <None Remove="ClientApp\store\Contact.ts" />
     <None Remove="ClientApp\store\Publications.ts" />
   </ItemGroup>
 
@@ -39,6 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\common\Common.ts" />
     <TypeScriptCompile Include="ClientApp\components\ContentBody\ContentBody.tsx" />
     <TypeScriptCompile Include="ClientApp\components\ContentBody\TwoColumnContentBody.tsx" />
     <TypeScriptCompile Include="ClientApp\components\ContentBody\OneColumnContentBody.tsx" />
@@ -46,10 +52,13 @@
     <TypeScriptCompile Include="ClientApp\components\Header\Header.tsx" />
     <TypeScriptCompile Include="ClientApp\components\TopNavMenu\TopNavMenu.tsx" />
     <TypeScriptCompile Include="ClientApp\containers\About\About.tsx" />
+    <TypeScriptCompile Include="ClientApp\containers\Contact\Contact.tsx" />
     <TypeScriptCompile Include="ClientApp\containers\Publication\Publication.tsx" />
     <TypeScriptCompile Include="ClientApp\di\bootstrap.ts" />
     <TypeScriptCompile Include="ClientApp\services\AuthenticationService.ts" />
+    <TypeScriptCompile Include="ClientApp\services\ContactService.ts" />
     <TypeScriptCompile Include="ClientApp\services\PublicationService.ts" />
+    <TypeScriptCompile Include="ClientApp\store\Contact.ts" />
     <TypeScriptCompile Include="ClientApp\store\Publications.ts" />
   </ItemGroup>
 

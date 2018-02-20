@@ -1,6 +1,6 @@
 ﻿import axios from "axios";
 import { IAuthenticationService } from "./AuthenticationService"
-import { injectable, inject, multiInject } from "inversify"
+import { injectable, inject } from "inversify"
 
 export interface IPublicationService {
     getPublications():any
@@ -11,7 +11,7 @@ export class PublicationService implements IPublicationService
 {
     private authenticationService: IAuthenticationService;
 
-    constructor( @inject("IAuthenticationService") authenticationService: IAuthenticationService) {
+    constructor(@inject("IAuthenticationService") authenticationService: IAuthenticationService) {
         this.authenticationService = authenticationService;
     }
 

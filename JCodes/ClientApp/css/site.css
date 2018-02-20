@@ -5,7 +5,7 @@ body { background-color: #1e1e1e; color: #fff; }
 .footer .logo-text { color:#fff; }
 .footer .title, .pub-parent li p, .mid-text { color: #c0bfbd }
 
-.rights { min-height: 50px; width: 100%; background-color: #575656; padding: 15px; }
+.rights { min-height: 50px; width: 100%; background-color: #131313; padding: 15px; border-top:solid 1px #2f2e2e }
 .rights .highlight { color: #f9c038; }
 
 ul { margin: 0; padding: 0; }
@@ -18,6 +18,7 @@ ul li { list-style: none; }
 .custom-nav { background: none; border: none; min-height: 0; margin-top: 100px; margin-bottom: 50px; }
 .main-title { line-height: 52px; font-size: 32pt; }
 .publication-title { width: 350px; }
+.publication.one-column .publication-title { width: 100%; }
 
 .sub-title { font-size: 15pt; }
 .divider1 { border-color: #2e2e2e }
@@ -28,16 +29,19 @@ ul li { list-style: none; }
 .custom-nav .nav.navbar-nav li a.active,
 .custom-nav .nav.navbar-nav li a.active:hover,
 .custom-nav .nav.navbar-nav li a.active:focus { color: #fff; }
-.custom-nav.navbar-default .navbar-nav > li > a { color: #f9c038; background: none; padding: 0; padding: 0 10px; display: inline; font-size: 10pt; }
+.custom-nav.navbar-default .navbar-nav > li > a { color: #f9c038; background: none; padding: 0; padding: 0 10px; display: inline; font-size: 11pt; }
 .custom-nav.navbar-default .navbar-nav > li { color: #f9c038; }
 .custom-nav.navbar-default .navbar-nav > li > a:hover { color: white; }
 .custom-nav.navbar-default .navbar-nav li.active a { background: none; color: white; }
 .custom-nav.navbar-default .navbar-nav li.active a:hover { background: none; color: white; }
 .custom-nav .collapse.navbar-collapse { padding-left: 0; }
 
-.publication { background-color: #575656; min-height: 450px; position: relative; /*temporary until the footer is made*/ }
+.publication { background: url(../images//bg.jpg) fixed 0 0 repeat; position:relative; background-color: #000; }
+.publication p { color:#c0bfbd }
+.publication.one-column { background-position-y: 80%; }
+.publication p { color:#ccc; font-size:16px; }
 .pub-wrapper { position: relative; }
-.pub-parent { margin-top:20px; margin-bottom:50px; }
+.pub-parent { margin-top:35px; margin-bottom:50px; }
 .pub-parent li { margin-bottom: 25px; }
 
 
@@ -67,6 +71,12 @@ ul li { list-style: none; }
 .link-list { font-size: 11pt; }
 .link-strong { font-size: 20pt; }
 
+/*Transitions*/
+.fadeTranslate-enter { opacity: 0; /*transform: translate(0, -3vh);*/ /*position: fixed;*/ }
+.fadeTranslate-enter.fadeTranslate-enter-active { opacity: 1; /*transform: translate(0, 0);*/ transition: opacity 300ms ease-in 300ms, transform 300ms ease-in-out 300ms; }
+.fadeTranslate-exit { opacity: 1; /*position: fixed; transform: translate(0, 0);*/ }
+.fadeTranslate-exit.fadeTranslate-exit-active { opacity: 0; /*transform: translate(0, 3vh);*/ transition: opacity 100ms ease-in, transform 100ms ease-in-out; }
+
 /* CSS UTILS */
 .blinker { animation-name: blinker; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(1,0,0,1); animation-duration: 1s; display: inline-block; width: 15px; height: 1px; margin-left: 0; border-radius: 3px; box-shadow: 0 0 10px #fff; background-color: #fff; margin-right: 1px; }
 
@@ -77,6 +87,7 @@ ul li { list-style: none; }
 .margin-bottom-40 { margin-bottom: 40px }
 .margin-bottom-50 { margin-bottom: 50px }
 .margin-bottom-60 { margin-bottom: 60px }
+.margin-bottom-100 { margin-bottom: 100px } 
 .margin-bottom-120 { margin-bottom: 120px }
 .relative { position: relative; }
 
@@ -89,7 +100,13 @@ ul li { list-style: none; }
 .margin-top-10 { margin-top: 10px }
 
 .publication.home { margin-top:80px; }
-.publication.home .pub-wrapper { margin-top: 70px; }
+.publication.home .pub-wrapper { margin-top: 50px; }
+input.form-control, textarea.form-control { background-color:#eee; }
+
+.notification-container { padding: 3px 15px; }
+.notification { box-sizing: border-box; padding: 15px 15px 15px 45px; border-radius: 5px; color: #fff; background-color: #ccc; box-shadow: 0 0 10px #f9c036; cursor: pointer; font-size: 1em; line-height: 1.2em; position: relative; opacity: .9; margin-top: 15px; }
+.notification:before { position: absolute; top: 50%; left: 10px; margin-top: -14px; display: block; font-family: Notification; width: 28px; height: 28px; font-size: 20px; text-align: center; line-height: 28px; }
+.notification-info { background-color: #000000; }
 
 @media (max-width: 767px) {
     .no-padding-left { padding-left: 15px; }
@@ -127,3 +144,8 @@ ul li { list-style: none; }
 
     .main-nav .navbar a { /* If a menu item's text is too long, truncate it */ width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 }
+
+
+
+
+

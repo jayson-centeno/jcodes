@@ -1,18 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using JCodes.Model;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace JCodes.Controllers
 {
+    [Authorize]
+    [Produces("application/json")]
     [Route("api/publications")]
     public class PublicationsController : Controller
     {
         [HttpGet("[action]")]
-        [Authorize]
         public IEnumerable<PublicationModel> GetPublications()
         {
             return new List<PublicationModel>() {

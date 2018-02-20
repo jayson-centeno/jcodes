@@ -3,7 +3,7 @@ import { AppThunkAction } from './';
 import { fetch, addTask } from 'domain-task';
 import axios from "axios"
 import { IPublicationService } from "../services/PublicationService";
-import container from "../di/bootstrap"
+import DIContainer from "../di/bootstrap"
 
 export interface PublicationsState {
     isLoading: boolean
@@ -31,7 +31,7 @@ export const actionCreators = {
 
     fetchPublications: () : AppThunkAction<KnownAction> => (dispatch, getstate) => {
         
-        let service = container.get<IPublicationService>("IPublicationService");
+        let service = DIContainer.get<IPublicationService>("IPublicationService");
         let fetchTask = service.getPublications()
             .then(response => {
 
@@ -48,7 +48,6 @@ export const actionCreators = {
         dispatch({ type: 'FetchPublications' });
 
     }
-
 }
 
 const unloadedState: PublicationsState = { isLoading: false, publications: [] }
