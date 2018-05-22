@@ -1,4 +1,4 @@
-﻿using AuthenticationSample.Data;
+﻿using JCodes.Database;
 using JCodes.Domain.Model.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;

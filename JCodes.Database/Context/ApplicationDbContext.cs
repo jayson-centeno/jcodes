@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AuthenticationSample.Data
+namespace JCodes.Database
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

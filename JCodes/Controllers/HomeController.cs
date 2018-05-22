@@ -25,9 +25,9 @@ namespace JCodes.Controllers
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var result = GetJwtSecurityToken(new UserAuthenticate() { Email = "jaysword1@yahoo.com", Password = "D@rkj@y1" }).Result;
+            var result = await GetJwtSecurityToken(new UserAuthenticate() { Email = "jaysword1@yahoo.com", Password = "Jc@des1" });
             string token = new JwtSecurityTokenHandler().WriteToken(result);
             return View(
                 new HomeModel() {
