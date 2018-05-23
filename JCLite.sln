@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite", "JCodes\JCLite.csproj", "{81154C27-7CF0-44F0-A652-DB700502CB07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite", "JCLite\JCLite.csproj", "{81154C27-7CF0-44F0-A652-DB700502CB07}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Presentation", "3 - Presentation", "{B79EC46B-F205-4370-A4F1-626C9236AB56}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Business", "2 - Business", "{D9785EF4-EA05-4353-AF41-3632526D71E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite.Common", "JCodes.Common\JCLite.Common.csproj", "{6D19BB35-D3A0-4999-BE07-541E5CA530E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite.Common", "JCLite.Common\JCLite.Common.csproj", "{6D19BB35-D3A0-4999-BE07-541E5CA530E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite.Domain.Model", "JCodes.Domain.Model\JCLite.Domain.Model.csproj", "{DADBD4B7-398E-48DB-863B-24099715ADF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite.Domain.Model", "JCLite.Domain.Model\JCLite.Domain.Model.csproj", "{DADBD4B7-398E-48DB-863B-24099715ADF3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite.Domain", "JCodes.Domain\JCLite.Domain.csproj", "{FC92CC29-A1EE-4D88-8427-575E5F419DE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite.Domain", "JCLite.Domain\JCLite.Domain.csproj", "{FC92CC29-A1EE-4D88-8427-575E5F419DE1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Data", "1 - Data", "{90B14F18-0663-461B-9BF3-2C5CE49018E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite.Database", "JCodes.Database\JCLite.Database.csproj", "{28C13F13-E103-4B68-B2E0-865742EBE076}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCLite.Database", "JCLite.Database\JCLite.Database.csproj", "{28C13F13-E103-4B68-B2E0-865742EBE076}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Tests", "0 - Tests", "{48764C36-28A6-40E5-9E48-981362F050CC}"
 EndProject
