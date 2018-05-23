@@ -1,9 +1,9 @@
-using JCodes.Model;
+using JCLite.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace JCodes.Controllers
+namespace JCLite.Controllers
 {
     [Authorize]
     [Produces("application/json")]

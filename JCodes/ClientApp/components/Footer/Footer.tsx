@@ -10,7 +10,7 @@ export class Footer extends React.Component<any, any> {
                 <div className='container'>
                     <div className="row">
                         <div className="col-sm-5 margin-top-10">
-                            <h3 className="logo-text">{'\{ '} JCODES<span className="blinker"></span>{' \}'}</h3>
+                            <h3 className="logo-text">{'\{ '} JCLite<span className="blinker"></span>{' \}'}</h3>
 
                             <div className="row margin-top-30">
 
@@ -97,7 +97,7 @@ export class Footer extends React.Component<any, any> {
                 <div className='container'>
                     <div className="row">
                         <div className="col-sm-5">
-                            @217-2018 <span className="highlight">www.jcodes.com</span>. All Rights Reserved
+                            @217-2018 <span className="highlight">www.jclite.net</span>. All Rights Reserved
                         </div>
                         <div className="col-sm-7">
                             Powered by <span className="highlight">.Net Core, ReactJs, Sql Server</span>

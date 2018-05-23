@@ -1,5 +1,5 @@
-using JCodes.Domain.Model.Authentication;
-using JCodes.Model;
+using JCLite.Domain.Model.Authentication;
+using JCLite.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +12,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCodes.Controllers
+namespace JCLite.Controllers
 {
     public class HomeController : Controller
     {

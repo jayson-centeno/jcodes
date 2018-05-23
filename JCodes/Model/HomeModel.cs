@@ -1,4 +1,4 @@
-﻿namespace JCodes.Model
+﻿namespace JCLite.Model
 {
     public class HomeModel
     {

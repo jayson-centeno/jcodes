@@ -29,7 +29,7 @@ export class AuthenticationService implements IAuthenticationService {
     setAuthToken(token: string): void {
         let localStorage = this.getLocalStorage();
         if (localStorage)
-            localStorage.setItem('jcodes_jwtToken', token);
+            localStorage.setItem('jclite_jwtToken', token);
         else { 
             let tokenElement = document.getElementById('Token') as HTMLInputElement;
             if (tokenElement != null)
@@ -48,7 +48,7 @@ export class AuthenticationService implements IAuthenticationService {
 
             let localStorage = this.getLocalStorage();
             if (localStorage)
-                token = localStorage.getItem('jcodes_jwtToken');
+                token = localStorage.getItem('jclite_jwtToken');
         }
 
         return token;

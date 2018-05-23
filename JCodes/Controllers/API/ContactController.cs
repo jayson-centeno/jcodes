@@ -1,8 +1,8 @@
-﻿using JCodes.Model;
+﻿using JCLite.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace JCodes.Controllers.API
+namespace JCLite.Controllers.API
 {
     [Authorize]
     [Produces("application/json")]

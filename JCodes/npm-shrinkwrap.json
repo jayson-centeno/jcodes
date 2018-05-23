@@ -1,5 +1,5 @@
 {
-  "name": "JCodes",
+  "name": "JCLite",
   "version": "0.0.0",
   "dependencies": {
     "@types/history": {

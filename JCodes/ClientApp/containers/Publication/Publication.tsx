@@ -28,5 +28,4 @@ export class Publication extends React.Component<PublicationProps, {}> {
             </div>
         </div>
     }
-
 }

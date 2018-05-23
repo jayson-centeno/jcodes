@@ -1,8 +1,8 @@
-﻿using JCodes.Domain.Model.Authentication;
+﻿using JCLite.Domain.Model.Authentication;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace JCodes.Database
+namespace JCLite.Database
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

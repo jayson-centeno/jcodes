@@ -1,5 +1,5 @@
-﻿using JCodes.Database;
-using JCodes.Domain.Model.Authentication;
+﻿using JCLite.Database;
+using JCLite.Domain.Model.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace JCodes
+namespace JCLite
 {
     public partial class Startup
     {

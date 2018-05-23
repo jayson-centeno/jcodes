@@ -8,11 +8,11 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using JCodes.Domain.Model.Authentication;
+using JCLite.Domain.Model.Authentication;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
 
-namespace JCodes
+namespace JCLite
 {
     [Route("api/[controller]")]
     public class TokenController : Controller

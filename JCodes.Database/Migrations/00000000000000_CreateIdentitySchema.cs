@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace JCodes.Database.Migrations
+namespace JCLite.Database.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

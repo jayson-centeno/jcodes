@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JCodes.Common
+namespace JCLite.Common
 {
     public static class StringExtensions
     {
