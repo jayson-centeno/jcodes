@@ -9,9 +9,9 @@ import { ApplicationState } from '../../store'
 import { connect } from 'react-redux'
 import { TwoColumnContentBody } from '../../components/ContentBody/TwoColumnContentBody';
 
-type PublicationProps = PublicationStore.PublicationsState & typeof PublicationStore.actionCreators & RouteComponentProps<{}>;
+type HomeProps = PublicationStore.PublicationsState & typeof PublicationStore.actionCreators & RouteComponentProps<{}>;
 
-class Home extends React.Component<PublicationProps, any> {
+class Home extends React.Component<HomeProps, any> {
 
     componentDidMount() {
         this.props.fetchPublications();
@@ -21,11 +21,13 @@ class Home extends React.Component<PublicationProps, any> {
 
         return <div>
             <div className="container">
-                <div className="row margin-bottom-120">
+                <div className="row margin-bottom-250">
                     <div className="col-sm-5">
                         <h1 className="main-title">Jayson is a Passionate Senior .Net & Front-End Developer</h1>
                     </div>
                     <div className="col-sm-7">
+                        <div id="profile-pic">
+                        </div>
                     </div>
                 </div>
                 <div className="row">
@@ -35,10 +37,10 @@ class Home extends React.Component<PublicationProps, any> {
                         <hr className="divider1" />
                         <hr className="divider2" />
                         <p className="mid-text">
-                            As both designer and developer of projects that require <br /> a laser focus on both,                                    I unite form and function to <br />meet both user needs and business goals.                                </p>
+                            As both designer and developer of projects that require <br /> a laser focus on both, I unite form and function to <br />meet both user needs and business goals.                        </p>
                         <p className="mid-text">
-                            Currently improving customer experiences as Senior UX <br /> Designer at BrightEdge.
-                                </p>
+                            Currently working as a FullStack Developer.
+                        </p>
                     </div>
 
                     <div className="col-sm-5">
@@ -67,9 +69,10 @@ class Home extends React.Component<PublicationProps, any> {
 
         </div>;
     }
+
 }
 
 export default connect(
     (state: ApplicationState) => state.publications,
     PublicationStore.actionCreators
-)(Home) as  typeof Home
+)(Home) as typeof Home

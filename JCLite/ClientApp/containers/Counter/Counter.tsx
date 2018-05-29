@@ -5,17 +5,12 @@ import { ApplicationState }  from '../../store';
 import * as CounterStore from '../../store/Counter';
 import * as WeatherForecasts from '../../store/WeatherForecasts';
 
-type CounterProps =
-    CounterStore.CounterState
-    & typeof CounterStore.actionCreators
-    & RouteComponentProps<{}>;
+type CounterProps = (CounterStore.CounterState & typeof CounterStore.actionCreators & RouteComponentProps<{}>);
 
-class Counter extends React.Component<CounterProps, {}> {
+class Counter extends React.Component<CounterProps, object> {
 
     componentWillMount() {
-
         const x = this.props;
-
     }
      
     public render() {

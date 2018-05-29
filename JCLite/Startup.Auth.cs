@@ -15,7 +15,10 @@ namespace JCLite
         private void ConfigureAuth(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<Database.Context.JCLiteDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                     .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -23,8 +26,7 @@ namespace JCLite
 
             services.AddCors(options => {
 
-                options.AddPolicy("*", builder =>
-                {
+                options.AddPolicy("*", builder => {
                     builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials();
                 });
 
@@ -49,7 +51,6 @@ namespace JCLite
 
 
                     });
-
         }
     }
 }

@@ -1,12 +1,11 @@
-﻿using JCLite.Domain.Model.Authentication;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using JCLite.Domain.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace JCLite.Database
+namespace JCLite.Database.Context
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class JCLiteDbContext: DbContext 
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public JCLiteDbContext(DbContextOptions<JCLiteDbContext> options) : base(options)
         {
         }
 
@@ -17,5 +16,7 @@ namespace JCLite.Database
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<Publication> Publications { get; set; }
     }
 }

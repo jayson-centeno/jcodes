@@ -42,7 +42,6 @@ export class Footer extends React.Component<any, any> {
 
                             </div>
 
-
                         </div>
                         <div className="col-sm-4">
 
@@ -100,7 +99,7 @@ export class Footer extends React.Component<any, any> {
                             @217-2018 <span className="highlight">www.jclite.net</span>. All Rights Reserved
                         </div>
                         <div className="col-sm-7">
-                            Powered by <span className="highlight">.Net Core, ReactJs, Sql Server</span>
+                            Powered by <span className="highlight">.Net Core, Typescript, React-Redux, Sql Server</span>
                         </div>
                     </div>
                 </div>

@@ -3,9 +3,9 @@ import { RouteComponentProps } from 'react-router-dom'
 import { OneColumnContentBody } from '../../components/ContentBody/OneColumnContentBody';
 import { TitleProps } from '../../common/Common'
 
-type PublicationProps = TitleProps & RouteComponentProps<any>;
+type AboutProps = TitleProps & RouteComponentProps<any>;
 
-export default class About extends React.Component<PublicationProps, {}> {
+export default class About extends React.Component<AboutProps, {}> {
 
     public render() {
         return <OneColumnContentBody {...this.props} Title="About">
