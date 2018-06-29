@@ -29,7 +29,7 @@ ul { margin: 0; padding: 0; }
 .custom-nav .nav.navbar-nav li a.active,
 .custom-nav .nav.navbar-nav li a.active:hover,
 .custom-nav .nav.navbar-nav li a.active:focus { color: #fff; }
-.custom-nav.navbar-default .navbar-nav > li > a { color: #f9c038; background: none; padding: 0; padding: 0 10px; display: inline; font-size: 11pt; }
+.custom-nav.navbar-default .navbar-nav > li > a { color: #f9c038; background: none; padding: 0; padding: 0 10px; display: inline; font-size: 10pt; }
 .custom-nav.navbar-default .navbar-nav > li { color: #f9c038; }
 	.custom-nav.navbar-default .navbar-nav > li > a:hover { color: white; }
 .custom-nav.navbar-default .navbar-nav li.active a { background: none; color: white; }

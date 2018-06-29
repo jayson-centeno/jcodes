@@ -27,7 +27,7 @@ namespace JCLite.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var result = await GetJwtSecurityToken(new UserAuthenticate() { Email = "jaysword1@yahoo.com", Password = "Jc@des1" });
+            var result = await GetJwtSecurityToken(new UserAuthenticate() { Email = "jaysword1@yahoo.com", Password = "Sw0rdf!sh" });
             string token = new JwtSecurityTokenHandler().WriteToken(result);
             return View(
                 new HomeModel() {
